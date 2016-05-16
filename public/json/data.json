@@ -1,0 +1,12 @@
+{
+    "total": 1,
+    "data": {
+        "lightbox": {
+            "start": 0,
+            "finish": 100,
+            "duration": 2000,
+			"startText": "Progress",
+			"finishText":"This task is {{progressLbConfig.progress}}% completed"
+        }
+    }
+}

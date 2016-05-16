@@ -1,0 +1,16 @@
+<div ng-show="progressLbConfig.showLightbox">
+	<div class="backdrop"></div>
+	<div class="lightbox-content">
+		<div class="progress-title">
+			Progress
+			<span class="lightbox-close" ng-click="close()"></span>
+		</div>
+		<div class="progress-bar">
+			<div class="progress" style="width: {{ progressLbConfig.progress }}%" ng-class="{'progress-complete':progressLbConfig.progress === progressLbConfig.finish}"></div>
+		</div>
+		<div class="progress-text">
+			<span ng-if="progressLbConfig.progress < progressLbConfig.finish">{{ progressLbConfig.progressText + ' ' + progressLbConfig.progress + '%' }}</span>
+			<span ng-if="progressLbConfig.progress === progressLbConfig.finish" class="tick">{{ progressLbConfig.progressText | interpolate:this }} <i></i></span>
+		</div>
+	</div>
+</div>
